@@ -32,7 +32,10 @@ recursos que poderão ser disponibilizados.
   
   <iframe src="/slides/slides_aula01.html" width="100%" height="450px"></iframe>
   
-  - [Slides da Aula 1 - pdf](/slides/slides_aula01.pdf){target="_blank"} (versão para impressão)
+
+- **Artigos citados**
+  
+  - [The History of Data Economy I, II, III, IV - pdf](/arquivos/history_of_data_economy.pdf){target="_blank"} 
   
   
 - **Tutoriais relacionados:**
