@@ -16,7 +16,7 @@ análises computacionais no contexto de Finanças e de áreas correlacionadas.
 
 - **Professor:** [Prof. Dr. Washington Santos da Silva](https://washingtonsilva.github.io){target="_blank"}
 - **E-mail:** washington.silva@ifmg.edu.br
-- **Horário de aula:** Quinta-Feira, 18:30-20:30
+- **Horário de aula:** Quinta-Feira, 18:30-22:30
 - **Local:** Laboratório de Informática **2** - Bloco B - 2$^{o}$ andar.
 
 ## Conteúdo
