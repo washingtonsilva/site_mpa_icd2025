@@ -327,8 +327,8 @@ o andamento da disciplina e o rendimento da turma.
 
 | Aula | Data      | Tópicos                                                         | Atividades                                    |
 |:----:|:---------:|:---------------------------------------------------------------:|:---------------------------------------------:|
-| 1    | 27/03/25  | • Apresentação da disciplina e metodologia<br>• Instalação e configuração dos softwares<br>• Introdução à Ciência de Dados | • Configuração do ambiente de trabalho<br>• Discussão sobre casos de uso em finanças |
-| 2    | 03/04/25  | • RStudio e projetos estruturados<br>• Primeiros passos com R | • Criação do primeiro projeto R<br>• Exercícios básicos de R |
+| 1    | 27/03/25  | • Instalação e configuração dos softwares<br> • Contexto e Apresentação da disciplina  | • Configuração do ambiente de trabalho|
+| 2    | 03/04/25  | • RStudio e projetos estruturados<br>• Primeiros passos com R | • Criação do primeiro projeto R<br>• Exercícios básicos sobre R |
 | 3    | 10/04/25  | • Estruturas de dados em R<br>• Importação de dados | • Manipulação de vetores e dataframes<br>• Importação de dados financeiros |
 | 4    | 24/04/25  | • Introdução ao Quarto<br>• Manipulação de dados com tidyverse | • Criação do primeiro documento Quarto<br>• **Atividade prática 1** |
 | 5    | 08/05/25  | • Elementos avançados do Quarto<br>• Programação funcional em R | • Formatação de relatórios em Quarto<br>• Criação de funções simples |
