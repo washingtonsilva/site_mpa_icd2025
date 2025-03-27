@@ -125,7 +125,7 @@
     "href": "cronograma.html",
     "title": "Cronograma",
     "section": "",
-    "text": "Nesta página, você encontrará o cronograma completo da disciplina, com links para os materiais de cada aula, incluindo slides, links para tutoriais criados para a disciplina, arquivos quarto (.qmd) e outros recursos que poderão ser disponibilizados.",
+    "text": "Nesta página, você encontrará o cronograma completo da disciplina, com links para os materiais de cada aula, incluindo slides, links para tutoriais criados para a disciplina, arquivos quarto (.qmd), artigos, e outros recursos que poderão ser disponibilizados.",
     "crumbs": [
       "Início",
       "Cronograma"
@@ -136,7 +136,7 @@
     "href": "cronograma.html#aula-1-27032025",
     "title": "Cronograma",
     "section": "Aula 1 (27/03/2025)",
-    "text": "Aula 1 (27/03/2025)\n\nTópicos:\n\nO que é Ciência de Dados?\nPapéis em Ciência de Dados\nApresentação do Programa da disciplina\n\nMateriais:\n\n\n\n\n\n\nSlides Aula 1 - html\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\nArtigos citados\n\nThe History of Data Economy I, II, III, IV - pdf\n\nTutoriais relacionados:\n\nIntrodução ao RStudio",
+    "text": "Aula 1 (27/03/2025)\n\nTópicos:\n\nApresentação da disciplina\nO que é Ciência de Dados?\n\nMateriais:\n\n\n\n\n\n\nSlides Aula 1 - html\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\n\nslides: versão para download (.zip)\n\nArtigos citados\n\nThe History of Data Economy I, II, III, IV - pdf\n\nTutoriais\n\nIntrodução ao RStudio\nIntrodução ao Sistema Quarto\nMarkdown\nIntrodução à Linguagem R\nControle de Versão com Git e GitHub",
     "crumbs": [
       "Início",
       "Cronograma"

@@ -22,7 +22,7 @@ website:
         href: https://www.linkedin.com/in/washingtonssilva/
       - icon: globe
         href: https://washingtonsilva.github.io
-    background: "#191970"
+    background: "#2F4F4F"
 
   sidebar:
     style: docked

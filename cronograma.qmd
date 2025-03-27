@@ -5,8 +5,8 @@ title: "Cronograma"
 
 Nesta página, você encontrará o cronograma completo da disciplina, com
 links para os materiais de cada aula, incluindo slides, links para 
-tutoriais criados para a disciplina, arquivos quarto (.qmd) e outros 
-recursos que poderão ser disponibilizados.
+tutoriais criados para a disciplina, arquivos quarto (.qmd), 
+artigos, e outros recursos que poderão ser disponibilizados.
 
 
 # Semana 1
@@ -14,11 +14,9 @@ recursos que poderão ser disponibilizados.
 ## Aula 1 (27/03/2025) 
 
 - **Tópicos:**
-
+  
+   - Apresentação da disciplina
   - O que é Ciência de Dados?
-  - Papéis em Ciência de Dados
-  - Apresentação do Programa da disciplina
-
 
 - **Materiais:**
 
@@ -32,15 +30,25 @@ recursos que poderão ser disponibilizados.
   
   <iframe src="/slides/slides_aula01.html" width="100%" height="450px"></iframe>
   
+  - [slides: versão para download (.zip)](arquivos/slides_aula01.zip)
+
 
 - **Artigos citados**
   
   - [The History of Data Economy I, II, III, IV - pdf](/arquivos/history_of_data_economy.pdf){target="_blank"} 
   
   
-- **Tutoriais relacionados:**
+- **Tutoriais**
   
   - [Introdução ao RStudio](https://washingtonsilva.github.io/tutorials/rstudio/){target="_blank"}
+  
+  - [Introdução ao Sistema Quarto](https://washingtonsilva.github.io/tutorials/quarto/){target="_blank"}
+  
+  - [Markdown](https://washingtonsilva.github.io/tutorials/markdown/){target="_blank"}
+  
+  - [Introdução à Linguagem R](https://washingtonsilva.github.io/tutorials/R/){target="_blank"}
+  
+  - [Controle de Versão com Git e GitHub](https://washingtonsilva.github.io/tutorials/git/){target="_blank"}
 
 
 
