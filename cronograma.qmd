@@ -53,6 +53,32 @@ artigos, e outros recursos que poderão ser disponibilizados.
 
 
 
+# Semana 2
+
+## Aula 2 (03/04/2025) 
+
+- **Tópicos:**
+
+  - Metodologia CRISP-DM
+  - Tipos de Análise
+  - Introdução ao RStudio 
+  - Introdução ao Sistema de Publicação Quarto
+  - Introdução ao Git e GitHub
+  - Fluxo de trabalho integrando RStudio/Quarto/R/Git/GitHub
+
+  
+- **Slides:**
+
+  ::: {.callout-tip}
+  ## Para navegar e visualizar 
+  
+  Clique no símbolo > à direita ou use as teclas: seta para direita →, espaço, 
+  ou letra "n"   para avançar. Pressione "F" para modo de tela cheia e "Esc" 
+  para sair.
+  ::: 
+
+
+
 
   
 
