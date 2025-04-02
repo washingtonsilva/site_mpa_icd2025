@@ -143,6 +143,17 @@
     ]
   },
   {
+    "objectID": "cronograma.html#aula-2-03042025",
+    "href": "cronograma.html#aula-2-03042025",
+    "title": "Cronograma",
+    "section": "Aula 2 (03/04/2025)",
+    "text": "Aula 2 (03/04/2025)\n\nTópicos:\n\nMetodologia CRISP-DM\nTipos de Análise\nIntrodução ao RStudio\nIntrodução ao Sistema de Publicação Quarto\nIntrodução ao Git e GitHub\nFluxo de trabalho integrando RStudio/Quarto/R/Git/GitHub\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
