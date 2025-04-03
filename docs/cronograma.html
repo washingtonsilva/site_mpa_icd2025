@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -245,7 +279,7 @@ Para navegar e visualizar
 <li><p><strong>Tópicos:</strong></p>
 <ul>
 <li>Metodologia CRISP-DM</li>
-<li>Tipos de Análise</li>
+<li>Tipos de Análise de Dados</li>
 <li>Introdução ao RStudio</li>
 <li>Introdução ao Sistema de Publicação Quarto</li>
 <li>Introdução ao Git e GitHub</li>
@@ -264,8 +298,53 @@ Para navegar e visualizar
 <div class="callout-body-container callout-body">
 <p>Clique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.</p>
 </div>
-</div></li>
+</div>
+<iframe src="./slides/slides_aula02.html" width="100%" height="450px">
+</iframe>
+<ul>
+<li><a href="arquivos/slides_aula02.zip">slides: versão para download (.zip)</a></li>
+</ul></li>
+<li><p><strong>CRISP-DM</strong></p>
+<ul>
+<li><a href="arquivos/guia-ibm-crispdm.pdf" target="_blank">Guia CRISP-DM da IBM</a></li>
+</ul></li>
+<li><p><strong>Arquivo de dados</strong></p>
+<ul>
+<li><a href="arquivos/productionlog_sample.csv">productionlog_sample (.csv)</a></li>
+</ul></li>
+<li><p><strong>Arquivo quarto</strong></p>
+<ul>
+<li><a href="arquivos/01-relatorio-html.zip">01-relatorio-html (.zip)</a> ss</li>
+</ul></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Como verificar e configurar seu perfil do Git em um computador?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Configurando seu perfil no Git</strong></p>
+<p>Após instalar o Git em um computador, digite os comandos abaixo no Git Bash (Windows) ou em um terminal (Linux/macOS), substituindo “Seu Nome” pelo nome de usuario que deseja usar (ex: maria_silva) e “seu.email@exemplo.com” pelo seu email para configurar um nome de usuário e email globalmente:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Seu Nome"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"seu.email@exemplo.com"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>É importante usar o mesmo nome e email em todos os computadores para manter a consistência na atribuição dos seus commits.</p>
+<p><strong>Verificando sua configuração do Git</strong></p>
+<p>Para verificar suas configurações atuais:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Para verificar o nome configurado</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Para verificar o email configurado</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Para listar todas as configurações do Git</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Observação:</strong> Se omitir a flag <code>--global</code>, você verá apenas as configurações específicas do repositório atual, se existirem.</p>
+</div>
+</div>
 
 
 </section>
