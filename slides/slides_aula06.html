@@ -4321,155 +4321,6 @@ Tabela 7: Meses de Maior e Menor Venda por Produto
 </div>
 </div>
 </div>
-</section><section id="solução-do-exercício-1" class="slide level2"><h2>Solução do Exercício 1</h2>
-<div style="font-size: 90%;">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Lista de vendas com nome do produto</strong></p>
-</div>
-<div class="callout-content">
-<div class="cell" style="font-size: 1em;">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href></a>lista_vendas_produtos <span class="ot">&lt;-</span> vendas <span class="sc">%&gt;%</span></span>
-<span id="cb77-2"><a href></a>  <span class="co"># 1. Usamos left_join para manter todas as vendas</span></span>
-<span id="cb77-3"><a href></a>  <span class="fu">left_join</span>(produtos, <span class="at">by =</span> <span class="st">&quot;codigo_produto&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb77-4"><a href></a>  <span class="co"># 2. Selecionamos apenas as colunas importantes</span></span>
-<span id="cb77-5"><a href></a>  <span class="fu">select</span>(</span>
-<span id="cb77-6"><a href></a>    id_venda, </span>
-<span id="cb77-7"><a href></a>    data_venda, </span>
-<span id="cb77-8"><a href></a>    nome_produto,</span>
-<span id="cb77-9"><a href></a>    quantidade</span>
-<span id="cb77-10"><a href></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb77-11"><a href></a>  <span class="co"># 3. Ordenamos por data da venda</span></span>
-<span id="cb77-12"><a href></a>  <span class="fu">arrange</span>(data_venda)</span>
-<span id="cb77-13"><a href></a></span>
-<span id="cb77-14"><a href></a><span class="co"># Visualizando o resultado</span></span>
-<span id="cb77-15"><a href></a>lista_vendas_produtos</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 4
-  id_venda data_venda nome_produto  quantidade
-     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;              &lt;dbl&gt;
-1        1 2025-04-15 Notebook Pro           1
-2        2 2025-04-16 Smartphone X           2
-3        3 2025-04-18 Monitor 24pol          2
-4        4 2025-04-20 Smartphone X           1
-5        5 2025-04-22 &lt;NA&gt;                   3
-6        6 2025-04-23 Mouse Gamer            4</code></pre>
-</div>
-</div>
-<p><strong>Explicação</strong>:</p>
-<ul>
-<li><p>Usamos <code>left_join</code> para manter todas as vendas, mesmo aquelas de produtos que não existem no cadastro</p></li>
-<li><p>Alguns produtos podem aparecer com nome NA quando não há correspondência</p></li>
-<li><p>Ordenamos por data de venda para ver a sequência cronológica</p></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section><section id="solução-do-exercício-2" class="slide level2"><h2>Solução do Exercício 2</h2>
-<div style="font-size: 90%;">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Relatório de clientes e suas compras</strong></p>
-</div>
-<div class="callout-content">
-<div class="cell" style="font-size: 1em;">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href></a>relatorio_clientes <span class="ot">&lt;-</span> clientes <span class="sc">%&gt;%</span></span>
-<span id="cb79-2"><a href></a>  <span class="co"># 1. Usamos left_join, mas com as tabelas na ordem inversa</span></span>
-<span id="cb79-3"><a href></a>  <span class="co"># (clientes como tabela principal)</span></span>
-<span id="cb79-4"><a href></a>  <span class="fu">left_join</span>(vendas, <span class="at">by =</span> <span class="st">&quot;id_cliente&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb79-5"><a href></a>  <span class="co"># 2. Selecionamos apenas as colunas importantes</span></span>
-<span id="cb79-6"><a href></a>  <span class="fu">select</span>(</span>
-<span id="cb79-7"><a href></a>    id_cliente,</span>
-<span id="cb79-8"><a href></a>    nome_cliente,</span>
-<span id="cb79-9"><a href></a>    cidade,</span>
-<span id="cb79-10"><a href></a>    id_venda,</span>
-<span id="cb79-11"><a href></a>    data_venda</span>
-<span id="cb79-12"><a href></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb79-13"><a href></a>  <span class="co"># 3. Ordenamos por nome do cliente</span></span>
-<span id="cb79-14"><a href></a>  <span class="fu">arrange</span>(nome_cliente)</span>
-<span id="cb79-15"><a href></a></span>
-<span id="cb79-16"><a href></a><span class="co"># Visualizando o resultado</span></span>
-<span id="cb79-17"><a href></a>relatorio_clientes</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 5
-  id_cliente nome_cliente   cidade         id_venda data_venda
-  &lt;chr&gt;      &lt;chr&gt;          &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;     
-1 C001       Empresa Alpha  São Paulo             1 2025-04-15
-2 C001       Empresa Alpha  São Paulo             3 2025-04-18
-3 C002       Empresa Beta   Rio de Janeiro        2 2025-04-16
-4 C002       Empresa Beta   Rio de Janeiro        5 2025-04-22
-5 C003       João Silva     Belo Horizonte        4 2025-04-20
-6 C005       Maria Oliveira Recife               NA &lt;NA&gt;      </code></pre>
-</div>
-</div>
-<p><strong>Explicação</strong>:</p>
-<ul>
-<li><p>Começamos com a tabela de clientes e usamos <code>left_join</code> para manter todos os clientes</p></li>
-<li><p>Clientes sem compras (como “Maria Oliveira”) aparecem com NA nas colunas de vendas</p></li>
-<li><p>Ordenamos por nome do cliente para facilitar a leitura do relatório</p></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section><section id="solução-do-exercício-3" class="slide level2"><h2>Solução do Exercício 3</h2>
-<div style="font-size: 90%;">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Relatório de vendas com informações completas</strong></p>
-</div>
-<div class="callout-content">
-<div class="cell" style="font-size: 1em;">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href></a><span class="co"># Solução completa para o relatório financeiro</span></span>
-<span id="cb81-2"><a href></a>relatorio_financeiro <span class="ot">&lt;-</span> vendas <span class="sc">%&gt;%</span></span>
-<span id="cb81-3"><a href></a>  <span class="co"># Combinamos vendas com produtos usando left_join</span></span>
-<span id="cb81-4"><a href></a>  <span class="fu">left_join</span>(produtos, <span class="at">by =</span> <span class="st">&quot;codigo_produto&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb81-5"><a href></a>  <span class="co"># Calculamos o valor total da venda</span></span>
-<span id="cb81-6"><a href></a>  <span class="fu">mutate</span>(<span class="at">valor_total =</span> quantidade <span class="sc">*</span> preco_unitario) <span class="sc">%&gt;%</span></span>
-<span id="cb81-7"><a href></a>  <span class="co"># Selecionamos apenas as colunas relevantes para o relatório</span></span>
-<span id="cb81-8"><a href></a>  <span class="fu">select</span>(</span>
-<span id="cb81-9"><a href></a>    id_venda, </span>
-<span id="cb81-10"><a href></a>    data_venda,</span>
-<span id="cb81-11"><a href></a>    codigo_produto, </span>
-<span id="cb81-12"><a href></a>    nome_produto,</span>
-<span id="cb81-13"><a href></a>    quantidade, </span>
-<span id="cb81-14"><a href></a>    preco_unitario,</span>
-<span id="cb81-15"><a href></a>    valor_total</span>
-<span id="cb81-16"><a href></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb81-17"><a href></a>  <span class="co"># Ordenamos do maior valor total para o menor</span></span>
-<span id="cb81-18"><a href></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(valor_total))</span>
-<span id="cb81-19"><a href></a></span>
-<span id="cb81-20"><a href></a><span class="co"># Visualizando o resultado</span></span>
-<span id="cb81-21"><a href></a>relatorio_financeiro</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 7
-  id_venda data_venda codigo_produto nome_produto  quantidade preco_unitario
-     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;          &lt;chr&gt;              &lt;dbl&gt;          &lt;dbl&gt;
-1        2 2025-04-16 P002           Smartphone X           2           2800
-2        1 2025-04-15 P001           Notebook Pro           1           4500
-3        4 2025-04-20 P002           Smartphone X           1           2800
-4        3 2025-04-18 P003           Monitor 24pol          2           1200
-5        6 2025-04-23 P004           Mouse Gamer            4            250
-6        5 2025-04-22 P006           &lt;NA&gt;                   3             NA
-# ℹ 1 more variable: valor_total &lt;dbl&gt;</code></pre>
-</div>
-</div>
-<p><strong>Explicação</strong>:</p>
-<ul>
-<li><p>Usamos <code>left_join</code> para manter todas as vendas, mesmo aquelas sem correspondência na tabela de produtos.</p></li>
-<li><p>O cálculo do <code>valor_total</code> é simplesmente a multiplicação da quantidade pelo preço unitário.</p></li>
-<li><p>Para ordenar do maior para o menor valor, usamos <code>arrange(desc(valor_total))</code> - o <code>desc()</code> inverte a ordem padrão (que seria crescente).</p></li>
-<li><p>Observe que vendas de produtos não cadastrados terão <code>NA</code> nos campos <code>nome_produto</code> e <code>preco_unitario</code>, resultando em <code>NA</code> também no <code>valor_total</code>.</p></li>
-<li><p>Este relatório poderia ser usado para identificar as vendas mais significativas financeiramente, o que seria útil para análises de clientes VIP ou produtos estratégicos.</p></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 </section><section id="o-desafio-dos-sistemas-reais" class="slide level2"><h2>O Desafio dos Sistemas Reais</h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -4491,11 +4342,11 @@ Tabela 7: Meses de Maior e Menor Venda por Produto
 </ul>
 <p><strong>Resultado</strong>: Tentar unir estas tabelas com a sintaxe básica falha:</p>
 <div class="cell" style="font-size: 1em;">
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href></a><span class="co"># Esta tentativa falha:</span></span>
-<span id="cb83-2"><a href></a>vendas <span class="sc">%&gt;%</span> </span>
-<span id="cb83-3"><a href></a>  <span class="fu">left_join</span>(produtos, <span class="at">by =</span> <span class="st">&quot;codigo_produto&quot;</span>) </span>
-<span id="cb83-4"><a href></a>  </span>
-<span id="cb83-5"><a href></a><span class="co"># ERRO: &#39;codigo_produto&#39; não encontrado em &#39;produtos&#39;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href></a><span class="co"># Esta tentativa falha:</span></span>
+<span id="cb77-2"><a href></a>vendas <span class="sc">%&gt;%</span> </span>
+<span id="cb77-3"><a href></a>  <span class="fu">left_join</span>(produtos, <span class="at">by =</span> <span class="st">&quot;codigo_produto&quot;</span>) </span>
+<span id="cb77-4"><a href></a>  </span>
+<span id="cb77-5"><a href></a><span class="co"># ERRO: &#39;codigo_produto&#39; não encontrado em &#39;produtos&#39;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Como resolver este problema comum?</p>
 </div>
@@ -4510,9 +4361,9 @@ Tabela 7: Meses de Maior e Menor Venda por Produto
 <div class="callout-content">
 <p>O dplyr permite especificar explicitamente quais colunas devem ser correspondidas:</p>
 <div class="cell" style="font-size: 1em;">
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href></a><span class="co"># Sintaxe para colunas com nomes diferentes</span></span>
-<span id="cb84-2"><a href></a>tabela1 <span class="sc">%&gt;%</span></span>
-<span id="cb84-3"><a href></a>  <span class="fu">left_join</span>(tabela2, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;nome_na_tabela1&quot;</span> <span class="ot">=</span> <span class="st">&quot;nome_na_tabela2&quot;</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href></a><span class="co"># Sintaxe para colunas com nomes diferentes</span></span>
+<span id="cb78-2"><a href></a>tabela1 <span class="sc">%&gt;%</span></span>
+<span id="cb78-3"><a href></a>  <span class="fu">left_join</span>(tabela2, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;nome_na_tabela1&quot;</span> <span class="ot">=</span> <span class="st">&quot;nome_na_tabela2&quot;</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Como interpretar:</strong></p>
 <ul>
@@ -4537,31 +4388,31 @@ Tabela 7: Meses de Maior e Menor Venda por Produto
 </div>
 <div class="callout-content">
 <div class="cell" style="font-size: 1em;">
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href></a><span class="co"># Sistema de Cadastro de Produtos (departamento de Compras)</span></span>
-<span id="cb85-2"><a href></a>produtos_cadastro <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb85-3"><a href></a>  <span class="sc">~</span>codigo,       <span class="sc">~</span>descricao,        <span class="sc">~</span>valor_unitario, <span class="sc">~</span>categoria,</span>
-<span id="cb85-4"><a href></a>  <span class="st">&quot;P001&quot;</span>,        <span class="st">&quot;Notebook Pro&quot;</span>,     <span class="dv">4500</span>,           <span class="st">&quot;Eletrônicos&quot;</span>,</span>
-<span id="cb85-5"><a href></a>  <span class="st">&quot;P002&quot;</span>,        <span class="st">&quot;Smartphone X&quot;</span>,     <span class="dv">2800</span>,           <span class="st">&quot;Eletrônicos&quot;</span>,</span>
-<span id="cb85-6"><a href></a>  <span class="st">&quot;P003&quot;</span>,        <span class="st">&quot;Monitor 24pol&quot;</span>,    <span class="dv">1200</span>,           <span class="st">&quot;Informática&quot;</span></span>
-<span id="cb85-7"><a href></a>)</span>
-<span id="cb85-8"><a href></a></span>
-<span id="cb85-9"><a href></a><span class="co"># Sistema de Vendas (departamento Comercial)</span></span>
-<span id="cb85-10"><a href></a>vendas_sistema <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb85-11"><a href></a>  <span class="sc">~</span>id_venda, <span class="sc">~</span>cod_produto, <span class="sc">~</span>data_venda,  <span class="sc">~</span>qtd,</span>
-<span id="cb85-12"><a href></a>  <span class="dv">1</span>,         <span class="st">&quot;P001&quot;</span>,       <span class="st">&quot;2025-04-15&quot;</span>, <span class="dv">1</span>,</span>
-<span id="cb85-13"><a href></a>  <span class="dv">2</span>,         <span class="st">&quot;P002&quot;</span>,       <span class="st">&quot;2025-04-16&quot;</span>, <span class="dv">2</span>,</span>
-<span id="cb85-14"><a href></a>  <span class="dv">3</span>,         <span class="st">&quot;P003&quot;</span>,       <span class="st">&quot;2025-04-18&quot;</span>, <span class="dv">2</span></span>
-<span id="cb85-15"><a href></a>)</span>
-<span id="cb85-16"><a href></a></span>
-<span id="cb85-17"><a href></a><span class="co"># Integrando os sistemas com diferentes nomenclaturas</span></span>
-<span id="cb85-18"><a href></a>relatorio_vendas <span class="ot">&lt;-</span> vendas_sistema <span class="sc">%&gt;%</span></span>
-<span id="cb85-19"><a href></a>  <span class="fu">left_join</span>(produtos_cadastro, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;cod_produto&quot;</span> <span class="ot">=</span> <span class="st">&quot;codigo&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb85-20"><a href></a>  <span class="fu">select</span>(id_venda, data_venda, cod_produto, descricao, qtd, valor_unitario) <span class="sc">%&gt;%</span></span>
-<span id="cb85-21"><a href></a>  <span class="fu">mutate</span>(<span class="at">valor_total =</span> qtd <span class="sc">*</span> valor_unitario) <span class="sc">%&gt;%</span></span>
-<span id="cb85-22"><a href></a>  <span class="fu">arrange</span>(data_venda)</span>
-<span id="cb85-23"><a href></a></span>
-<span id="cb85-24"><a href></a><span class="co"># Resultado: um relatório integrado</span></span>
-<span id="cb85-25"><a href></a>relatorio_vendas</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href></a><span class="co"># Sistema de Cadastro de Produtos (departamento de Compras)</span></span>
+<span id="cb79-2"><a href></a>produtos_cadastro <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb79-3"><a href></a>  <span class="sc">~</span>codigo,       <span class="sc">~</span>descricao,        <span class="sc">~</span>valor_unitario, <span class="sc">~</span>categoria,</span>
+<span id="cb79-4"><a href></a>  <span class="st">&quot;P001&quot;</span>,        <span class="st">&quot;Notebook Pro&quot;</span>,     <span class="dv">4500</span>,           <span class="st">&quot;Eletrônicos&quot;</span>,</span>
+<span id="cb79-5"><a href></a>  <span class="st">&quot;P002&quot;</span>,        <span class="st">&quot;Smartphone X&quot;</span>,     <span class="dv">2800</span>,           <span class="st">&quot;Eletrônicos&quot;</span>,</span>
+<span id="cb79-6"><a href></a>  <span class="st">&quot;P003&quot;</span>,        <span class="st">&quot;Monitor 24pol&quot;</span>,    <span class="dv">1200</span>,           <span class="st">&quot;Informática&quot;</span></span>
+<span id="cb79-7"><a href></a>)</span>
+<span id="cb79-8"><a href></a></span>
+<span id="cb79-9"><a href></a><span class="co"># Sistema de Vendas (departamento Comercial)</span></span>
+<span id="cb79-10"><a href></a>vendas_sistema <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb79-11"><a href></a>  <span class="sc">~</span>id_venda, <span class="sc">~</span>cod_produto, <span class="sc">~</span>data_venda,  <span class="sc">~</span>qtd,</span>
+<span id="cb79-12"><a href></a>  <span class="dv">1</span>,         <span class="st">&quot;P001&quot;</span>,       <span class="st">&quot;2025-04-15&quot;</span>, <span class="dv">1</span>,</span>
+<span id="cb79-13"><a href></a>  <span class="dv">2</span>,         <span class="st">&quot;P002&quot;</span>,       <span class="st">&quot;2025-04-16&quot;</span>, <span class="dv">2</span>,</span>
+<span id="cb79-14"><a href></a>  <span class="dv">3</span>,         <span class="st">&quot;P003&quot;</span>,       <span class="st">&quot;2025-04-18&quot;</span>, <span class="dv">2</span></span>
+<span id="cb79-15"><a href></a>)</span>
+<span id="cb79-16"><a href></a></span>
+<span id="cb79-17"><a href></a><span class="co"># Integrando os sistemas com diferentes nomenclaturas</span></span>
+<span id="cb79-18"><a href></a>relatorio_vendas <span class="ot">&lt;-</span> vendas_sistema <span class="sc">%&gt;%</span></span>
+<span id="cb79-19"><a href></a>  <span class="fu">left_join</span>(produtos_cadastro, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;cod_produto&quot;</span> <span class="ot">=</span> <span class="st">&quot;codigo&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb79-20"><a href></a>  <span class="fu">select</span>(id_venda, data_venda, cod_produto, descricao, qtd, valor_unitario) <span class="sc">%&gt;%</span></span>
+<span id="cb79-21"><a href></a>  <span class="fu">mutate</span>(<span class="at">valor_total =</span> qtd <span class="sc">*</span> valor_unitario) <span class="sc">%&gt;%</span></span>
+<span id="cb79-22"><a href></a>  <span class="fu">arrange</span>(data_venda)</span>
+<span id="cb79-23"><a href></a></span>
+<span id="cb79-24"><a href></a><span class="co"># Resultado: um relatório integrado</span></span>
+<span id="cb79-25"><a href></a>relatorio_vendas</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 7
   id_venda data_venda cod_produto descricao       qtd valor_unitario valor_total
@@ -4709,25 +4560,25 @@ Tabela 7: Meses de Maior e Menor Venda por Produto
 </div>
 <div class="callout-content">
 <div class="cell" style="font-size: 1em;">
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href></a><span class="co"># LEFT JOIN: todos os registros da tabela1</span></span>
-<span id="cb87-2"><a href></a></span>
-<span id="cb87-3"><a href></a>tabela1 <span class="sc">%&gt;%</span> </span>
-<span id="cb87-4"><a href></a>  <span class="fu">left_join</span>(tabela2, <span class="at">by =</span> <span class="st">&quot;coluna_comum&quot;</span>)</span>
-<span id="cb87-5"><a href></a></span>
-<span id="cb87-6"><a href></a><span class="co"># INNER JOIN: apenas registros com correspondência</span></span>
-<span id="cb87-7"><a href></a></span>
-<span id="cb87-8"><a href></a>tabela1 <span class="sc">%&gt;%</span> </span>
-<span id="cb87-9"><a href></a>  <span class="fu">inner_join</span>(tabela2, <span class="at">by =</span> <span class="st">&quot;coluna_comum&quot;</span>)</span>
-<span id="cb87-10"><a href></a></span>
-<span id="cb87-11"><a href></a><span class="co"># FULL JOIN: todos os registros de ambas as tabelas</span></span>
-<span id="cb87-12"><a href></a></span>
-<span id="cb87-13"><a href></a>tabela1 <span class="sc">%&gt;%</span> </span>
-<span id="cb87-14"><a href></a>  <span class="fu">full_join</span>(tabela2, <span class="at">by =</span> <span class="st">&quot;coluna_comum&quot;</span>)</span>
-<span id="cb87-15"><a href></a></span>
-<span id="cb87-16"><a href></a><span class="co"># RIGHT JOIN: todos os registros da tabela2</span></span>
-<span id="cb87-17"><a href></a></span>
-<span id="cb87-18"><a href></a>tabela1 <span class="sc">%&gt;%</span> </span>
-<span id="cb87-19"><a href></a>  <span class="fu">right_join</span>(tabela2, <span class="at">by =</span> <span class="st">&quot;coluna_comum&quot;</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href></a><span class="co"># LEFT JOIN: todos os registros da tabela1</span></span>
+<span id="cb81-2"><a href></a></span>
+<span id="cb81-3"><a href></a>tabela1 <span class="sc">%&gt;%</span> </span>
+<span id="cb81-4"><a href></a>  <span class="fu">left_join</span>(tabela2, <span class="at">by =</span> <span class="st">&quot;coluna_comum&quot;</span>)</span>
+<span id="cb81-5"><a href></a></span>
+<span id="cb81-6"><a href></a><span class="co"># INNER JOIN: apenas registros com correspondência</span></span>
+<span id="cb81-7"><a href></a></span>
+<span id="cb81-8"><a href></a>tabela1 <span class="sc">%&gt;%</span> </span>
+<span id="cb81-9"><a href></a>  <span class="fu">inner_join</span>(tabela2, <span class="at">by =</span> <span class="st">&quot;coluna_comum&quot;</span>)</span>
+<span id="cb81-10"><a href></a></span>
+<span id="cb81-11"><a href></a><span class="co"># FULL JOIN: todos os registros de ambas as tabelas</span></span>
+<span id="cb81-12"><a href></a></span>
+<span id="cb81-13"><a href></a>tabela1 <span class="sc">%&gt;%</span> </span>
+<span id="cb81-14"><a href></a>  <span class="fu">full_join</span>(tabela2, <span class="at">by =</span> <span class="st">&quot;coluna_comum&quot;</span>)</span>
+<span id="cb81-15"><a href></a></span>
+<span id="cb81-16"><a href></a><span class="co"># RIGHT JOIN: todos os registros da tabela2</span></span>
+<span id="cb81-17"><a href></a></span>
+<span id="cb81-18"><a href></a>tabela1 <span class="sc">%&gt;%</span> </span>
+<span id="cb81-19"><a href></a>  <span class="fu">right_join</span>(tabela2, <span class="at">by =</span> <span class="st">&quot;coluna_comum&quot;</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Observe que:</strong></p>
 <ol type="1">
@@ -4752,10 +4603,10 @@ Tabela 7: Meses de Maior e Menor Venda por Produto
 <li><p><strong>Quando as colunas têm nomes diferentes</strong>, use esta sintaxe:</p></li>
 </ol>
 <div class="cell" style="font-size: 1em;">
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href></a><span class="co"># Quando colunas têm nomes diferentes nas tabelas</span></span>
-<span id="cb88-2"><a href></a>vendas <span class="sc">%&gt;%</span> </span>
-<span id="cb88-3"><a href></a>  <span class="fu">left_join</span>(produtos, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;codigo_produto&quot;</span> <span class="ot">=</span> <span class="st">&quot;codigo&quot;</span>))</span>
-<span id="cb88-4"><a href></a><span class="co">#            ^ coluna na tabela vendas   ^ coluna na tabela produtos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href></a><span class="co"># Quando colunas têm nomes diferentes nas tabelas</span></span>
+<span id="cb82-2"><a href></a>vendas <span class="sc">%&gt;%</span> </span>
+<span id="cb82-3"><a href></a>  <span class="fu">left_join</span>(produtos, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;codigo_produto&quot;</span> <span class="ot">=</span> <span class="st">&quot;codigo&quot;</span>))</span>
+<span id="cb82-4"><a href></a><span class="co">#            ^ coluna na tabela vendas   ^ coluna na tabela produtos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -4828,31 +4679,31 @@ Tabela 7: Meses de Maior e Menor Venda por Produto
 <ol type="1">
 <li>No terminal do RStudio, verifique quais arquivos/pastas foram modificados ou criados com:</li>
 </ol>
-<div class="sourceCode" id="cb89" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb89-1"><a href></a><span class="fu">git</span> status</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb83" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb83-1"><a href></a><span class="fu">git</span> status</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
 <li>Você pode adicionar todos os arquivos de uma vez com:</li>
 </ol>
-<div class="sourceCode" id="cb90" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb90-1"><a href></a><span class="fu">git</span> add .</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb84" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb84-1"><a href></a><span class="fu">git</span> add .</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="3" type="1">
 <li>Execute git status novamente para confirmar que todos os arquivos foram adicionados (aparecerão em <span style="color: green;">verde</span> sob “<em>Changes to be committed</em>”):</li>
 </ol>
-<div class="sourceCode" id="cb91" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb91-1"><a href></a><span class="fu">git</span> status</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb85" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb85-1"><a href></a><span class="fu">git</span> status</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="4" type="1">
 <li>Se tudo estiver em <span style="color: green;">verde</span>, faça um commit com uma mensagem descritiva:</li>
 </ol>
-<div class="sourceCode" id="cb92" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb92-1"><a href></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;atualizacoes aula 5&quot;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb86" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb86-1"><a href></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;atualizacoes aula 5&quot;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="5" type="1">
 <li>Se algum arquivo ou pasta ainda aparecer em <span style="color: red;">vermelho</span> após o segundo git status, adicione as pastas/arquivos um por um:</li>
 </ol>
-<div class="sourceCode" id="cb93" style="font-size: 1.2em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb93-1"><a href></a><span class="fu">git</span> add relatorios/05-relatorio/05-relatorio.qmd</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb87" style="font-size: 1.2em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb87-1"><a href></a><span class="fu">git</span> add relatorios/05-relatorio/05-relatorio.qmd</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="6" type="1">
 <li>Execute git status novamente e faça o commit quando todos os arquivos estiverem em verde:</li>
 </ol>
-<div class="sourceCode" id="cb94" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb94-1"><a href></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;atualizacoes aula 5&quot;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb88" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb88-1"><a href></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;atualizacoes aula 5&quot;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="7" type="1">
 <li>Envie o repositório local atualizado para o GitHub:</li>
 </ol>
-<div class="sourceCode" id="cb95" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb95-1"><a href></a><span class="fu">git</span> push origin main</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb89" style="font-size: 1.1em;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb89-1"><a href></a><span class="fu">git</span> push origin main</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
