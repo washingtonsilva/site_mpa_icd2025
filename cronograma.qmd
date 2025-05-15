@@ -236,7 +236,7 @@ configurações específicas do repositório atual, se existirem.
   - [slides: versão para download (.zip)](arquivos/slides_aula05.zip)
 
 
-- **Arquivos compactados para a aula**
+- **Arquivo quarto para a aula**
 
   - [05-report.zip](arquivos/05-report.zip)
 
@@ -270,4 +270,9 @@ configurações específicas do repositório atual, se existirem.
   <iframe src="/slides/slides_aula06.html" width="100%" height="450px"></iframe>
   
   - [slides: versão para download (.zip)](arquivos/slides_aula06.zip)
+
+
+- **Arquivo quarto para a aula**
+
+  - [06-report.zip](arquivos/06-report.zip)
 
