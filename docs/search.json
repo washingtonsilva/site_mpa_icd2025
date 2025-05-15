@@ -180,7 +180,18 @@
     "href": "cronograma.html#aula-5-08052025",
     "title": "Cronograma",
     "section": "Aula 5 (08/05/2025)",
-    "text": "Aula 5 (08/05/2025)\n\nTópicos:\n\nRevisão sobre Dados Organizados\nIntrodução ao Pacote tidyr\nIntrodução ao Pacote dplyr\nPacote dplyr: Tipos Básicos de Joins\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\n\nslides: versão para download (.zip)\n\nArquivos compactados para a aula\n\n05-report.zip",
+    "text": "Aula 5 (08/05/2025)\n\nTópicos:\n\nMetodologia CRISP-DM: Fases 2 e 3\nRevisão sobre Dados Organizados (Tidy Data)\nIntrodução ao Pacote tidyr: função pivot_longer()\nIntrodução ao Pacote dplyr: funções select() e filter()\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\n\nslides: versão para download (.zip)\n\nArquivos compactados para a aula\n\n05-report.zip",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "cronograma.html#aula-6-15052025",
+    "href": "cronograma.html#aula-6-15052025",
+    "title": "Cronograma",
+    "section": "Aula 6 (15/05/2025)",
+    "text": "Aula 6 (15/05/2025)\n\nTópicos:\n\nIntrodução ao Pacote dplyr:\n\nFunção mutate\nFunções group_by e summarize\n\nPacote dplyr: Tipos Básicos de joins\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\n\nslides: versão para download (.zip)",
     "crumbs": [
       "Início",
       "Cronograma"
