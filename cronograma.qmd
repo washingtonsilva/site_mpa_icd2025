@@ -276,3 +276,7 @@ configurações específicas do repositório atual, se existirem.
 
   - [06-report.zip](arquivos/06-report.zip)
 
+
+- **Artigo para Leitura**
+  
+  - [How to Pick a Programming Language - Nature 640, 1116-1117 (2025)](/arquivos/d41586-025-01241-6.pdf){target="_blank"} 
