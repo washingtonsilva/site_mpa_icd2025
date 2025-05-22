@@ -254,9 +254,6 @@ configurações específicas do repositório atual, se existirem.
     - Função mutate
     - Funções group_by e summarize
 
-  - Pacote dplyr: Tipos Básicos de *joins*
-
-  
 - **Slides:**
 
   ::: {.callout-tip}
