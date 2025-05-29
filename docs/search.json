@@ -209,6 +209,17 @@
     ]
   },
   {
+    "objectID": "cronograma.html#aula-8-29052025",
+    "href": "cronograma.html#aula-8-29052025",
+    "title": "Cronograma",
+    "section": "Aula 8 (29/05/2025)",
+    "text": "Aula 8 (29/05/2025)\n\nTópico:\n\nAvaliação 1\n\n\n\n\n\n\n\n\nAvaliação 1\n\n\n\nClique aqui para acessar a Avaliação 1\nClique aqui para informações sobre os dados das Questões 4 e 5\n\n\n\nArquivos necessários\n\ndados_franco2022.zip - arquivo de dados\n01-avaliacao-template.zip - template de arquivo quarto para resolução da avaliação\n\n\n\n\n\n\n\n\nEstruturando seu Projeto RStudio para a Avaliação 1\n\n\n\n\nAbra o RStudio e o seu Projeto RStudio da disciplina.\nBaixe o arquivo de dados dados_franco2022.zip, descompacte esse arquivo, copie/recorte o arquivo dados_franco2022.csv e salve-o na subpasta raw da pasta data do seu Projeto RStudio\nCrie uma pasta chamada avaliacoes na raiz do seu Projeto RStudio\nDentro da pasta avaliacoes , crie uma subpasta chamada 01-avaliacao\nBaixe o arquivo 01-avaliacao-template.zip, descompacte esse arquivo, copie/recorte o arquivo 01-avaliacao-template.qmd e salve-o na subpasta 01-avaliacao que você acabou de criar\nRenomeie o arquivo 01-avaliacao-template.qmd para 01-avaliacao-seunome.qmd\nEscreva seu nome na chave author: \"SEU NOME AQUI\" do cabeçalho yaml e resolva as questões\n\n\n\n\n\n\n\n\n\nInstruções para Envio da Resolução da Avaliação 1\n\n\n\n\nCompacte seu arquivo HTML em um arquivo ZIP (01-avaliacao-seunome.zip)\nAtualize o repositório no github de seu projeto RStudio da disciplina, que deve conter sua resolução da avaliação.\nEnvie o arquivo compactado e o link do seu repositório no github para o email washington.silva@ifmg.edu.br, use o assunto: Avaliação 1 - MPA.",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",

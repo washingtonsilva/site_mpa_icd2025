@@ -301,3 +301,72 @@ configurações específicas do repositório atual, se existirem.
 - **Arquivo quarto para a aula**
 
   - [06-report.zip](arquivos/06-report.zip)
+
+
+
+
+# Semana 8
+
+## Aula 8 (29/05/2025)
+
+- **Tópico:**
+
+  - Avaliação 1
+
+::: {.callout-tip}
+## Avaliação 1 
+
+[**Clique aqui para acessar a Avaliação 1**](/arquivos/01-avaliacao.html){target="_blank"}
+
+[**Clique aqui para informações sobre os dados das Questões 4 e 5**](/arquivos/info_dados_exercicios.html){target="_blank"}
+:::
+
+
+- **Arquivos necessários**
+
+  - [dados_franco2022.zip](arquivos/dados_franco2022.zip) - arquivo de dados
+  - [01-avaliacao-template.zip](arquivos/01-avaliacao-template.zip) - template de arquivo quarto para resolução da avaliação 
+
+
+
+::: {.callout-tip}
+## Estruturando seu Projeto RStudio para a Avaliação 1
+
+1. Abra o RStudio e o seu Projeto RStudio da disciplina.
+
+2. Baixe o arquivo de dados **dados_franco2022.zip**, descompacte esse arquivo, 
+copie/recorte o arquivo `dados_franco2022.csv` e salve-o na subpasta 
+**raw** da pasta **data** do seu Projeto RStudio
+
+3. Crie uma pasta chamada **avaliacoes** na raiz do seu Projeto RStudio
+
+4. Dentro da pasta **avaliacoes** , crie uma subpasta chamada **01-avaliacao**
+
+5. Baixe o arquivo **01-avaliacao-template.zip**, descompacte esse arquivo, 
+copie/recorte o arquivo `01-avaliacao-template.qmd` e salve-o na 
+subpasta **01-avaliacao** que você acabou de criar
+
+6. Renomeie o arquivo `01-avaliacao-template.qmd` para 
+`01-avaliacao-seunome.qmd`
+
+7. Escreva seu nome na chave `author: "SEU NOME AQUI"` do cabeçalho yaml 
+e resolva as questões
+:::
+
+
+
+
+::: {.callout-tip}
+## Instruções para Envio da Resolução da Avaliação 1
+
+1. Compacte seu arquivo HTML em um arquivo ZIP 
+(`01-avaliacao-seunome.zip`)
+
+2. Atualize o repositório no github de seu projeto RStudio da 
+disciplina, que deve conter sua resolução da avaliação.
+
+3. Envie o arquivo compactado e o link do seu repositório no 
+github para o email **washington.silva@ifmg.edu.br**, 
+use o assunto: **Avaliação 1 - MPA**.
+:::
+
