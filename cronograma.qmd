@@ -426,3 +426,32 @@ use o assunto: **Avaliação 1 - MPA**.
   - [slides: versão para download (.zip)](arquivos/slides_aula09.zip)
 
 
+
+
+# Semana 11
+
+## Aula 11 (26/06/2025) 
+
+- **Tópicos:**
+
+  - Fundamentos de Probabilidade e Simulação - Parte 3
+
+- **Slides:**
+
+  ::: {.callout-tip}
+  ## Para navegar e visualizar 
+  
+  Clique no símbolo > à direita ou use as teclas: seta para direita →, espaço, 
+  ou letra "n"   para avançar. Pressione "F" para modo de tela cheia e "Esc" 
+  para sair.
+  :::
+  
+  <iframe src="/slides/slides_aula10.html" width="100%" height="450px"></iframe>
+  
+  - [slides: versão para download (.zip)](arquivos/slides_aula10.zip)
+
+- **Arquivo quarto para a aula**
+
+  - [08-report.zip](arquivos/08-report.zip)
+
+
