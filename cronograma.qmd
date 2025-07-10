@@ -485,3 +485,33 @@ use o assunto: **Avaliação 1 - MPA**.
   - [09-report.zip](arquivos/09-report.zip)
 
 
+
+
+# Semana 13
+
+## Aula 13 (10/07/2025) 
+
+- **Tópicos:**
+
+  - Fundamentos de Estatística - Parte 2
+
+- **Slides:**
+
+  ::: {.callout-tip}
+  ## Para navegar e visualizar 
+  
+  Clique no símbolo > à direita ou use as teclas: seta para direita →, espaço, 
+  ou letra "n"   para avançar. Pressione "F" para modo de tela cheia e "Esc" 
+  para sair.
+  :::
+  
+  <iframe src="/slides/slides_aula13.html" width="100%" height="450px"></iframe>
+  
+  - [slides: versão para download (.zip)](arquivos/slides_aula13.zip)
+
+- **Arquivo quarto para a aula**
+
+  - [10-report.zip](arquivos/10-report.zip)
+
+
+
