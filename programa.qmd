@@ -14,8 +14,8 @@ reproduzíveis na área de Finanças, desenvolvendo capacidade crítica para
 implementar modelos empíricos robustos, interpretar resultados e comunicar 
 análises computacionais no contexto de Finanças e de áreas correlacionadas.
 
-Os fundamentos envolvem computação científica reproduzível, 
-pensamento estatístico e probabilístico aplicados a Finanças. Trata-se de 
+Os fundamentos envolvem computação científica reprodutível, 
+pensamento probabilístico e estatístico aplicados a Finanças. Trata-se de 
 um curso do tipo *hands-on*. O objetivo é levar os mestrandos do zero à 
 capacidade de formular questões relevantes, coletar e preparar dados adequados, 
 implementar análises apropriadas usando a linguagem R, interpretar 
@@ -28,7 +28,10 @@ habilidades desenvolvidas representam não apenas requisitos para pesquisas
 acadêmicas alinhadas às boas práticas contemporâneas, mas constituem um 
 conjunto de ferramentas diferenciadas para o desenvolvimento de soluções 
 baseadas em dados para desafios reais do mercado de trabalho atual em 
-Finanças e em outras áreas.
+Finanças e em outras áreas. Para isso, utiliza-se a metodologia CRISP-DM 
+como estrutura orientadora para condução de análises de dados tanto no 
+âmbito da pesquisa quanto em aplicações industriais.
+
 
 
 ## Objetivos Especificos
@@ -38,7 +41,8 @@ computação científica, incluindo: Ambiente de Desenvolvimento
 Integrado RStudio, Sistema de Publicação Quarto, linguagem R, controle 
 de versão com Git e GitHub, e boas práticas de organização, documentação 
 e compartilhamento de dados e códigos para garantir transparência e 
-reprodutibilidade metodológica.
+reprodutibilidade metodológica, tendo como diretriz a metodologia CRISP-DM 
+para estruturação do processo analítico.
 
 2. Revisar, de forma aplicada, fundamentos de Probabilidade e 
 Estatística necessários para o desenvolvimento, aplicação e 
@@ -55,57 +59,22 @@ reprodução dos resultados por terceiros.
 
 
 
+
 ## Avaliação
 
-O planejamento da disciplina prevê que os pontos referentes às avaliações de aprendizagem serão distribuídos da seguinte forma:
+O planejamento da disciplina prevê que os pontos referentes às avaliações 
+serão distribuídos da seguinte forma:
 
-1. Atividades práticas (**Avaliação 1**) = 20 pontos 
-   (5-8 atividades ao longo do semestre)
-  
-    - Implementação de pequenos exercícios usando RStudio/Quarto/R/Git/GitHub.
-    - Resolução de problemas usando conceitos de probabilidade e estatística.
-    - Uso adequado do Quarto para documentação.
+1. Avaliação 1 = 33 pontos 
 
-2. Projeto intermediário (**Avaliação 2**) = 25 pontos
+2. Avaliação 2 = 33 pontos
 
-    - Análise exploratória de um conjunto de dados.
-    - Implementação de métodos estatísticos básicos.
-    - Documentação completa e reproduzível no Quarto.
-    - Repositório organizado no GitHub.
-
-3. Atividade avaliativa teórico-prática (**Avaliação 3**) = 25 pontos
-
-    - Verificação dos conceitos fundamentais de probabilidade e estatística.
-    - Resolução de problemas usando métodos de simulação.
-
-4. Projeto final (**Avaliação 4**) = 30 pontos
-
-    - Desenvolvimento de um projeto completo de análise de dados.
-    - Aplicação dos conceitos e ferramentas aprendidos.
-    - Relatório final em formato de artigo usando Quarto.
-    - Apresentação oral dos resultados.
-    - Disponibilização do projeto completo em repositório GitHub.
+3. Avaliação 4 = 34 pontos
 
 Para aprovação, é necessária a obtenção de pelo menos 60 pontos. Como 
 em todo planejamento, pode haver alterações conforme o andamento da 
 disciplina e o rendimento da turma.
 
-### Critérios de Avaliação
-
-Os projetos (intermediário e final) serão avaliados considerando, 
-aproximadamente, os seguintes critérios:
-
-- Reprodutibilidade (25%): código bem documentado e **organização** do 
-  repositório.
-  
-- Implementação técnica (25%): uso **correto** das ferramentas 
-  computacionais.
-  
-- Análise estatística (25%): aplicação correta dos métodos e 
-  interpretação coerente.
-  
-- Comunicação dos resultados (25%): **qualidade** do relatório, das 
-  visualizações e apresentação oral (no caso do projeto final).
 
 
 
@@ -180,7 +149,7 @@ BLITZSTEIN, Joseph K.; HWANG, Jessica. **Introduction to Probability**.
 
 ## Ementa
 
-Introdução à Computação Científica: IDE Rstudio, Sistema Quarto, 
+Introdução à Computação Científica Reproduzível: IDE Rstudio, Sistema Quarto, 
 Linguagem R e Git/GitHub. Fundamentos de Probabilidade e 
 Simulação. Fundamentos de Estatística e Simulação. 
 
@@ -190,7 +159,7 @@ Simulação. Fundamentos de Estatística e Simulação.
 
 ## Conteúdo Programático
 
-### 1. Introdução à Computação Científica (20 horas)
+### 1. Introdução à Computação Científica Reprodutível 
 
 - 1.1. Conceitos Fundamentais de Ciência de Dados
   - 1.1.1. O que é Ciência de Dados?
@@ -212,10 +181,10 @@ Simulação. Fundamentos de Estatística e Simulação.
  
 - 1.4. Introdução à Linguagem R
   - 1.4.1. Sintaxe básica, operadores e tipos de dados
-  - 1.4.2. Estruturas de dados fundamentais (vetores, matrizes, dataframes, listas)
+  - 1.4.2. Estruturas de dados fundamentais 
   - 1.4.3. Importação e exportação de dados
   - 1.4.4. Manipulação de dados com tidyverse (dplyr, tidyr)
-  - 1.4.5. Programação funcional e introdução à criação de funções
+  - 1.4.5. Introdução à criação de funções
   
 - 1.5. Controle de Versão com Git e GitHub
   - 1.5.1. Conceitos fundamentais e fluxo de trabalho básico
@@ -223,54 +192,51 @@ Simulação. Fundamentos de Estatística e Simulação.
   - 1.5.3. Colaboração e integração com RStudio
 
 
-### 2. Fundamentos de Probabilidade e Simulação (20 horas)
+### 2. Fundamentos de Probabilidade e Simulação 
 
 - 2.1. Conceitos Básicos de Probabilidade 
   - 2.1.1. Experimentos aleatórios, espaço amostral e eventos
   - 2.1.2. Axiomas da probabilidade
-  - 2.1.3. Técnicas de contagem aplicadas à probabilidade
+  - 2.1.3. Probabilidade Condicional e Independência
+  - 2.1.4. Conceito de variável aleatória
+  - 2.1.5. Distribuições discretas de probabilidade 
+  - 2.1.6. Distribuições contínuas de probabilidade
+  - 2.1.7. Implementação de distribuições de probabilidade em R
+  - 2.1.8. Lei dos Grandes Números e Teorema Central do Limite
+  - 2.1.9. Características de Distribuições de Probabilidade
+    - 2.1.9.1. Valor Esperado, Variância e Desvio-Padrão
+    - 2.1.9.2. Assimetria e Curtose
+  - 2.1.10. Distribução Conjunta, Marginal e Condicional
+    - 2.1.10.1. Covariância e Correlação
+  
 
-- 2.2. Probabilidade Condicional e Independência
-  - 2.2.1. Definição e interpretação
-  - 2.2.2. Teorema de Bayes e aplicações em finanças
-
-- 2.3. Variáveis Aleatórias e Distribuições de Probabilidade
-  - 2.3.1. Conceito de variável aleatória
-  - 2.3.2. Distribuições discretas relevantes para finanças (Binomial, Poisson)
-  - 2.3.3. Distribuições contínuas relevantes para finanças (Normal, t-Student, Lognormal)
-  - 2.3.4. Implementação de distribuições de probabilidade em R
-  - 2.3.5. Características de Distribuições de Probabilidade
-
-- 2.4. Simulação de Monte Carlo
-  - 2.4.1. Princípios básicos de simulação
-  - 2.4.2. Geração de números aleatórios em R
-  - 2.4.3. Simulações para compreensão de conceitos probabilísticos
-  - 2.4.4. Aplicações em finanças.
+- 2.2. Simulação de Monte Carlo
+  - 2.2.1. Princípios básicos de simulação
+  - 2.2.2. Geração de números aleatórios em R
+  - 2.2.3. Simulações para compreensão de conceitos probabilísticos
+  - 2.2.4. Aplicações em finanças
+    - 2.2.4.1. Análise de Viabilidade sob Incerteza
+    - 2.2.4.2. Gestão de Risco e Fluxo de Caixa
+    - 2.2.4.3. Medidas de Risco: VaR e ES (CVaR) 
 
 
-### 3. Fundamentos de Estatística e Visualização (20 horas)
+### 3. Fundamentos de Inferência Estatística 
 
-- 3.1. Estatística Descritiva e Exploração de Dados
-  - 3.1.1. Medidas de tendência central e dispersão
-  - 3.1.2. Análise exploratória de dados financeiros
-  - 3.1.3. Visualização de dados com ggplot2
-  - 3.1.4. Dashboards básicos com flexdashboard
+- 3.1. Fundamentos de Inferência Estatística
+  - 3.1.1. Amostragem Aleatória 
+  - 3.1.2. Estimação pontual e intervalar
+  - 3.1.3. Interpretação de intervalos de confiança 
+  - 3.1.4. Simulação para compreensão da inferência estatística
 
-- 3.2. Inferência Estatística
-  - 3.2.1. Amostragem e desenho de experimentos
-  - 3.2.2. Estimação pontual e intervalar
-  - 3.2.3. Interpretação de intervalos de confiança em contextos financeiros
-  - 3.2.4. Simulação para compreensão da inferência estatística
+- 3.2. Testes de Hipóteses
+  - 3.2.1. Conceitos Principais
+  - 3.2.2. Testes paramétricos principais
+  - 3.2.3. Interpretação de resultados e significância prática vs. estatística
+  - 3.2.4. Simulação e Inferência Estatística
 
-- 3.3. Testes de Hipóteses
-  - 3.3.1. Conceitos Principais
-  - 3.3.2. Testes paramétricos principais (t-test, ANOVA, qui-quadrado)
-  - 3.3.3. Interpretação de resultados e significância prática vs. estatística
-  - 3.3.4. Simulação e Inferência Estatística
-
-- 3.4. Introdução à Modelagem Estatística
-  - 3.4.1. Correlação e causalidade
-  - 3.4.2. Visualização de relações entre variáveis
+- 3.3. Estatística Descritiva e Análise Exploratória de Dados
+  - 3.3.1. Medidas de tendência central/posição e dispersão
+  - 3.3.2. Análise exploratória numérica e gráfica
 
 
 
@@ -288,7 +254,7 @@ Entre os recursos didáticos utilizados na disciplina estão:
   
   - Tutoriais desenvolvidos em Quarto.
   
-  - Arquivos quarto demonstrativos (.qmd).
+  - Arquivos quarto (*reports*) demonstrativos (.qmd).
 
 - **Ambiente e Ferramentas**:
 
@@ -308,6 +274,7 @@ e/ou no ambiente virtual de aprendizagem.
 
 
 
+
 ## Metodologia de Ensino
 
 Trata-se de um curso do tipo "*hands-on*" e baseado no conceito de 
@@ -319,28 +286,29 @@ e sistema Quarto.
 
 
 
+
 ## Plano de Aula
 
 Certamente, o planejamento apresentado está sujeito a alterações, conforme 
 o andamento da disciplina e o rendimento da turma.
 
 
-| Aula | Data      | Tópicos                                                         | Atividades                                    |
-|:----:|:---------:|:---------------------------------------------------------------:|:---------------------------------------------:|
-| 1    | 27/03/25  | • Instalação e configuração dos softwares<br> • Contexto e Apresentação da disciplina  | • Configuração do ambiente de trabalho|
-| 2    | 03/04/25  | • RStudio e projetos estruturados<br>• Primeiros passos com R | • Criação do primeiro projeto R<br>• Exercícios básicos sobre R |
-| 3    | 10/04/25  | • Estruturas de dados em R<br>• Importação de dados | • Manipulação de vetores e dataframes<br>• Importação de dados financeiros |
-| 4    | 24/04/25  | • Introdução ao Quarto<br>• Manipulação de dados com tidyverse | • Criação do primeiro documento Quarto<br>• **Atividade prática 1** |
-| 5    | 08/05/25  | • Elementos avançados do Quarto<br>• Programação funcional em R | • Formatação de relatórios em Quarto<br>• Criação de funções simples |
-| 6    | 15/05/25  | • Controle de versão com Git e GitHub<br>• Conceitos básicos de probabilidade | • Configuração do repositório GitHub<br>• **Atividade prática 2** |
-| 7    | 22/05/25  | • Probabilidade condicional e independência<br>• Introdução às variáveis aleatórias | • Resolução de problemas de probabilidade<br>• Implementação em R |
-| 8    | 29/05/25  | • Distribuições discretas<br>• Distribuições contínuas | • **Projeto intermediário (apresentação)**<br>• Simulações de distribuições |
-| 9    | 05/06/25  | • Simulação de Monte Carlo - princípios<br>• Aplicações financeiras da simulação | • Simulações de eventos aleatórios<br>• **Atividade prática 3** |
-| 10   | 12/06/25  | • Estatística descritiva<br>• Análise exploratória de dados financeiros | • Análise de conjuntos de dados reais<br>• Cálculo de estatísticas descritivas |
-| 11   | 26/06/25  | • Visualização de dados com ggplot2<br>• Dashboards básicos | • Criação de gráficos informativos<br>• **Atividade prática 4** |
-| 12   | 03/07/25  | • Amostragem e desenho de experimentos<br>• Estimação pontual e intervalar | • Simulações de amostragem<br>• Construção de intervalos de confiança |
-| 13   | 10/07/25  | • Testes de hipóteses em finanças<br>• Interpretação de resultados estatísticos | • **Avaliação teórico-prática**<br>• Implementação de testes estatísticos |
-| 14   | 17/07/25  | • Correlação e causalidade<br>• Introdução a modelos preditivos | • Análise de correlações • **Atividade prática 5** |
-| 15   | 24/07/25  | • Validação de modelos<br>• Integração dos conhecimentos | • **Apresentação do Projeto Final**<br>• Fechamento da disciplina |
+| Aula | Data      | Tópicos Principais                                  |
+|:----:|:---------:|:----------------------------------------------------|
+| 1    | 27/03/25  | Apresentação da Disicplina.                         |
+| 2    | 03/04/25  | Introdução à Computação Científica Reprodutível     | 
+| 3    | 10/04/25  | Introdução à Computação Científica Reprodutível     |
+| 4    | 24/04/25  | Introdução à Computação Científica Reprodutível     |
+| 5    | 08/05/25  | Introdução à Computação Científica Reprodutível     |
+| 6    | 15/05/25  | Introdução à Computação Científica Reprodutível     |
+| 7    | 22/05/25  | Introdução à Computação Científica Reprodutível     |
+| 8    | 29/05/25  | Avaliação 1                                         |
+| 9    | 05/06/25  | Fundamentos de Probabilidade e Simulação            | 
+|10    | 12/06/25  | Fundamentos de Probabilidade e Simulação            |
+|11    | 26/06/25  | Fundamentos de Probabilidade e Simulação            |
+|12    | 03/07/25  | Fundamentos de Inferência Estatística               |
+|13    | 10/07/25  | Fundamentos de Inferência Estatística               |
+|14    | 17/07/25  | Fundamentos de Inferência Estatística - Avaliação 2 |
+|15    | 24/07/25  | Avaliação 3                                         |
 
 

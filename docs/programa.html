@@ -163,18 +163,15 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#objetivo-geral" id="toc-objetivo-geral" class="nav-link active" data-scroll-target="#objetivo-geral">Objetivo Geral</a></li>
   <li><a href="#objetivos-especificos" id="toc-objetivos-especificos" class="nav-link" data-scroll-target="#objetivos-especificos">Objetivos Especificos</a></li>
-  <li><a href="#avaliação" id="toc-avaliação" class="nav-link" data-scroll-target="#avaliação">Avaliação</a>
-  <ul class="collapse">
-  <li><a href="#critérios-de-avaliação" id="toc-critérios-de-avaliação" class="nav-link" data-scroll-target="#critérios-de-avaliação">Critérios de Avaliação</a></li>
-  </ul></li>
+  <li><a href="#avaliação" id="toc-avaliação" class="nav-link" data-scroll-target="#avaliação">Avaliação</a></li>
   <li><a href="#bibliografia-básica" id="toc-bibliografia-básica" class="nav-link" data-scroll-target="#bibliografia-básica">Bibliografia Básica</a></li>
   <li><a href="#bibliografia-complementar" id="toc-bibliografia-complementar" class="nav-link" data-scroll-target="#bibliografia-complementar">Bibliografia Complementar</a></li>
   <li><a href="#ementa" id="toc-ementa" class="nav-link" data-scroll-target="#ementa">Ementa</a></li>
   <li><a href="#conteúdo-programático" id="toc-conteúdo-programático" class="nav-link" data-scroll-target="#conteúdo-programático">Conteúdo Programático</a>
   <ul class="collapse">
-  <li><a href="#introdução-à-computação-científica-20-horas" id="toc-introdução-à-computação-científica-20-horas" class="nav-link" data-scroll-target="#introdução-à-computação-científica-20-horas">1. Introdução à Computação Científica (20 horas)</a></li>
-  <li><a href="#fundamentos-de-probabilidade-e-simulação-20-horas" id="toc-fundamentos-de-probabilidade-e-simulação-20-horas" class="nav-link" data-scroll-target="#fundamentos-de-probabilidade-e-simulação-20-horas">2. Fundamentos de Probabilidade e Simulação (20 horas)</a></li>
-  <li><a href="#fundamentos-de-estatística-e-visualização-20-horas" id="toc-fundamentos-de-estatística-e-visualização-20-horas" class="nav-link" data-scroll-target="#fundamentos-de-estatística-e-visualização-20-horas">3. Fundamentos de Estatística e Visualização (20 horas)</a></li>
+  <li><a href="#introdução-à-computação-científica-reprodutível" id="toc-introdução-à-computação-científica-reprodutível" class="nav-link" data-scroll-target="#introdução-à-computação-científica-reprodutível">1. Introdução à Computação Científica Reprodutível</a></li>
+  <li><a href="#fundamentos-de-probabilidade-e-simulação" id="toc-fundamentos-de-probabilidade-e-simulação" class="nav-link" data-scroll-target="#fundamentos-de-probabilidade-e-simulação">2. Fundamentos de Probabilidade e Simulação</a></li>
+  <li><a href="#fundamentos-de-inferência-estatística" id="toc-fundamentos-de-inferência-estatística" class="nav-link" data-scroll-target="#fundamentos-de-inferência-estatística">3. Fundamentos de Inferência Estatística</a></li>
   </ul></li>
   <li><a href="#recursos-didáticos-e-materiais-de-estudo" id="toc-recursos-didáticos-e-materiais-de-estudo" class="nav-link" data-scroll-target="#recursos-didáticos-e-materiais-de-estudo">Recursos Didáticos e Materiais de Estudo</a></li>
   <li><a href="#metodologia-de-ensino" id="toc-metodologia-de-ensino" class="nav-link" data-scroll-target="#metodologia-de-ensino">Metodologia de Ensino</a></li>
@@ -214,59 +211,26 @@ ul.task-list li input[type="checkbox"] {
 <section id="objetivo-geral" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-geral">Objetivo Geral</h2>
 <p>O objetivo primário é equipar os mestrandos com conhecimentos fundacionais e ferramentas modernas para conduzirem projetos de pesquisa empírica reproduzíveis na área de Finanças, desenvolvendo capacidade crítica para implementar modelos empíricos robustos, interpretar resultados e comunicar análises computacionais no contexto de Finanças e de áreas correlacionadas.</p>
-<p>Os fundamentos envolvem computação científica reproduzível, pensamento estatístico e probabilístico aplicados a Finanças. Trata-se de um curso do tipo <em>hands-on</em>. O objetivo é levar os mestrandos do zero à capacidade de formular questões relevantes, coletar e preparar dados adequados, implementar análises apropriadas usando a linguagem R, interpretar criticamente os resultados obtidos e comunicar efetivamente suas conclusões com uso de ferramentas modernas que garantam a reprodutibilidade, incluindo o sistema Quarto e LaTeX.</p>
-<p>Um foco importante é demonstrar aos mestrandos que as competências e habilidades desenvolvidas representam não apenas requisitos para pesquisas acadêmicas alinhadas às boas práticas contemporâneas, mas constituem um conjunto de ferramentas diferenciadas para o desenvolvimento de soluções baseadas em dados para desafios reais do mercado de trabalho atual em Finanças e em outras áreas.</p>
+<p>Os fundamentos envolvem computação científica reprodutível, pensamento probabilístico e estatístico aplicados a Finanças. Trata-se de um curso do tipo <em>hands-on</em>. O objetivo é levar os mestrandos do zero à capacidade de formular questões relevantes, coletar e preparar dados adequados, implementar análises apropriadas usando a linguagem R, interpretar criticamente os resultados obtidos e comunicar efetivamente suas conclusões com uso de ferramentas modernas que garantam a reprodutibilidade, incluindo o sistema Quarto e LaTeX.</p>
+<p>Um foco importante é demonstrar aos mestrandos que as competências e habilidades desenvolvidas representam não apenas requisitos para pesquisas acadêmicas alinhadas às boas práticas contemporâneas, mas constituem um conjunto de ferramentas diferenciadas para o desenvolvimento de soluções baseadas em dados para desafios reais do mercado de trabalho atual em Finanças e em outras áreas. Para isso, utiliza-se a metodologia CRISP-DM como estrutura orientadora para condução de análises de dados tanto no âmbito da pesquisa quanto em aplicações industriais.</p>
 </section>
 <section id="objetivos-especificos" class="level2">
 <h2 class="anchored" data-anchor-id="objetivos-especificos">Objetivos Especificos</h2>
 <ol type="1">
-<li><p>Capacitar o mestrando em ferramentas e técnicas modernas de computação científica, incluindo: Ambiente de Desenvolvimento Integrado RStudio, Sistema de Publicação Quarto, linguagem R, controle de versão com Git e GitHub, e boas práticas de organização, documentação e compartilhamento de dados e códigos para garantir transparência e reprodutibilidade metodológica.</p></li>
+<li><p>Capacitar o mestrando em ferramentas e técnicas modernas de computação científica, incluindo: Ambiente de Desenvolvimento Integrado RStudio, Sistema de Publicação Quarto, linguagem R, controle de versão com Git e GitHub, e boas práticas de organização, documentação e compartilhamento de dados e códigos para garantir transparência e reprodutibilidade metodológica, tendo como diretriz a metodologia CRISP-DM para estruturação do processo analítico.</p></li>
 <li><p>Revisar, de forma aplicada, fundamentos de Probabilidade e Estatística necessários para o desenvolvimento, aplicação e interpretação crítica de modelos empíricos na área de Finanças, incluindo o uso de métodos de simulação para validação de resultados e avaliação de incertezas em contextos financeiros.</p></li>
 <li><p>Capacitar o mestrando para a comunicação efetiva de análises e resultados através da elaboração de relatórios, visualizações e apresentações utilizando o Sistema Quarto e LaTeX, com ênfase na documentação completa e transparente do processo de pesquisa que permita a verificação e reprodução dos resultados por terceiros.</p></li>
 </ol>
 </section>
 <section id="avaliação" class="level2">
 <h2 class="anchored" data-anchor-id="avaliação">Avaliação</h2>
-<p>O planejamento da disciplina prevê que os pontos referentes às avaliações de aprendizagem serão distribuídos da seguinte forma:</p>
+<p>O planejamento da disciplina prevê que os pontos referentes às avaliações serão distribuídos da seguinte forma:</p>
 <ol type="1">
-<li><p>Atividades práticas (<strong>Avaliação 1</strong>) = 20 pontos (5-8 atividades ao longo do semestre)</p>
-<ul>
-<li>Implementação de pequenos exercícios usando RStudio/Quarto/R/Git/GitHub.</li>
-<li>Resolução de problemas usando conceitos de probabilidade e estatística.</li>
-<li>Uso adequado do Quarto para documentação.</li>
-</ul></li>
-<li><p>Projeto intermediário (<strong>Avaliação 2</strong>) = 25 pontos</p>
-<ul>
-<li>Análise exploratória de um conjunto de dados.</li>
-<li>Implementação de métodos estatísticos básicos.</li>
-<li>Documentação completa e reproduzível no Quarto.</li>
-<li>Repositório organizado no GitHub.</li>
-</ul></li>
-<li><p>Atividade avaliativa teórico-prática (<strong>Avaliação 3</strong>) = 25 pontos</p>
-<ul>
-<li>Verificação dos conceitos fundamentais de probabilidade e estatística.</li>
-<li>Resolução de problemas usando métodos de simulação.</li>
-</ul></li>
-<li><p>Projeto final (<strong>Avaliação 4</strong>) = 30 pontos</p>
-<ul>
-<li>Desenvolvimento de um projeto completo de análise de dados.</li>
-<li>Aplicação dos conceitos e ferramentas aprendidos.</li>
-<li>Relatório final em formato de artigo usando Quarto.</li>
-<li>Apresentação oral dos resultados.</li>
-<li>Disponibilização do projeto completo em repositório GitHub.</li>
-</ul></li>
+<li><p>Avaliação 1 = 33 pontos</p></li>
+<li><p>Avaliação 2 = 33 pontos</p></li>
+<li><p>Avaliação 4 = 34 pontos</p></li>
 </ol>
 <p>Para aprovação, é necessária a obtenção de pelo menos 60 pontos. Como em todo planejamento, pode haver alterações conforme o andamento da disciplina e o rendimento da turma.</p>
-<section id="critérios-de-avaliação" class="level3">
-<h3 class="anchored" data-anchor-id="critérios-de-avaliação">Critérios de Avaliação</h3>
-<p>Os projetos (intermediário e final) serão avaliados considerando, aproximadamente, os seguintes critérios:</p>
-<ul>
-<li><p>Reprodutibilidade (25%): código bem documentado e <strong>organização</strong> do repositório.</p></li>
-<li><p>Implementação técnica (25%): uso <strong>correto</strong> das ferramentas computacionais.</p></li>
-<li><p>Análise estatística (25%): aplicação correta dos métodos e interpretação coerente.</p></li>
-<li><p>Comunicação dos resultados (25%): <strong>qualidade</strong> do relatório, das visualizações e apresentação oral (no caso do projeto final).</p></li>
-</ul>
-</section>
 </section>
 <section id="bibliografia-básica" class="level2">
 <h2 class="anchored" data-anchor-id="bibliografia-básica">Bibliografia Básica</h2>
@@ -294,12 +258,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="ementa" class="level2">
 <h2 class="anchored" data-anchor-id="ementa">Ementa</h2>
-<p>Introdução à Computação Científica: IDE Rstudio, Sistema Quarto, Linguagem R e Git/GitHub. Fundamentos de Probabilidade e Simulação. Fundamentos de Estatística e Simulação.</p>
+<p>Introdução à Computação Científica Reproduzível: IDE Rstudio, Sistema Quarto, Linguagem R e Git/GitHub. Fundamentos de Probabilidade e Simulação. Fundamentos de Estatística e Simulação.</p>
 </section>
 <section id="conteúdo-programático" class="level2">
 <h2 class="anchored" data-anchor-id="conteúdo-programático">Conteúdo Programático</h2>
-<section id="introdução-à-computação-científica-20-horas" class="level3">
-<h3 class="anchored" data-anchor-id="introdução-à-computação-científica-20-horas">1. Introdução à Computação Científica (20 horas)</h3>
+<section id="introdução-à-computação-científica-reprodutível" class="level3">
+<h3 class="anchored" data-anchor-id="introdução-à-computação-científica-reprodutível">1. Introdução à Computação Científica Reprodutível</h3>
 <ul>
 <li>1.1. Conceitos Fundamentais de Ciência de Dados
 <ul>
@@ -324,10 +288,10 @@ ul.task-list li input[type="checkbox"] {
 <li>1.4. Introdução à Linguagem R
 <ul>
 <li>1.4.1. Sintaxe básica, operadores e tipos de dados</li>
-<li>1.4.2. Estruturas de dados fundamentais (vetores, matrizes, dataframes, listas)</li>
+<li>1.4.2. Estruturas de dados fundamentais</li>
 <li>1.4.3. Importação e exportação de dados</li>
 <li>1.4.4. Manipulação de dados com tidyverse (dplyr, tidyr)</li>
-<li>1.4.5. Programação funcional e introdução à criação de funções</li>
+<li>1.4.5. Introdução à criação de funções</li>
 </ul></li>
 <li>1.5. Controle de Versão com Git e GitHub
 <ul>
@@ -337,65 +301,64 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="fundamentos-de-probabilidade-e-simulação-20-horas" class="level3">
-<h3 class="anchored" data-anchor-id="fundamentos-de-probabilidade-e-simulação-20-horas">2. Fundamentos de Probabilidade e Simulação (20 horas)</h3>
+<section id="fundamentos-de-probabilidade-e-simulação" class="level3">
+<h3 class="anchored" data-anchor-id="fundamentos-de-probabilidade-e-simulação">2. Fundamentos de Probabilidade e Simulação</h3>
 <ul>
 <li>2.1. Conceitos Básicos de Probabilidade
 <ul>
 <li>2.1.1. Experimentos aleatórios, espaço amostral e eventos</li>
 <li>2.1.2. Axiomas da probabilidade</li>
-<li>2.1.3. Técnicas de contagem aplicadas à probabilidade</li>
-</ul></li>
-<li>2.2. Probabilidade Condicional e Independência
+<li>2.1.3. Probabilidade Condicional e Independência</li>
+<li>2.1.4. Conceito de variável aleatória</li>
+<li>2.1.5. Distribuições discretas de probabilidade</li>
+<li>2.1.6. Distribuições contínuas de probabilidade</li>
+<li>2.1.7. Implementação de distribuições de probabilidade em R</li>
+<li>2.1.8. Lei dos Grandes Números e Teorema Central do Limite</li>
+<li>2.1.9. Características de Distribuições de Probabilidade
 <ul>
-<li>2.2.1. Definição e interpretação</li>
-<li>2.2.2. Teorema de Bayes e aplicações em finanças</li>
+<li>2.1.9.1. Valor Esperado, Variância e Desvio-Padrão</li>
+<li>2.1.9.2. Assimetria e Curtose</li>
 </ul></li>
-<li>2.3. Variáveis Aleatórias e Distribuições de Probabilidade
+<li>2.1.10. Distribução Conjunta, Marginal e Condicional
 <ul>
-<li>2.3.1. Conceito de variável aleatória</li>
-<li>2.3.2. Distribuições discretas relevantes para finanças (Binomial, Poisson)</li>
-<li>2.3.3. Distribuições contínuas relevantes para finanças (Normal, t-Student, Lognormal)</li>
-<li>2.3.4. Implementação de distribuições de probabilidade em R</li>
-<li>2.3.5. Características de Distribuições de Probabilidade</li>
+<li>2.1.10.1. Covariância e Correlação</li>
 </ul></li>
-<li>2.4. Simulação de Monte Carlo
+</ul></li>
+<li>2.2. Simulação de Monte Carlo
 <ul>
-<li>2.4.1. Princípios básicos de simulação</li>
-<li>2.4.2. Geração de números aleatórios em R</li>
-<li>2.4.3. Simulações para compreensão de conceitos probabilísticos</li>
-<li>2.4.4. Aplicações em finanças.</li>
+<li>2.2.1. Princípios básicos de simulação</li>
+<li>2.2.2. Geração de números aleatórios em R</li>
+<li>2.2.3. Simulações para compreensão de conceitos probabilísticos</li>
+<li>2.2.4. Aplicações em finanças
+<ul>
+<li>2.2.4.1. Análise de Viabilidade sob Incerteza</li>
+<li>2.2.4.2. Gestão de Risco e Fluxo de Caixa</li>
+<li>2.2.4.3. Medidas de Risco: VaR e ES (CVaR)</li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
-<section id="fundamentos-de-estatística-e-visualização-20-horas" class="level3">
-<h3 class="anchored" data-anchor-id="fundamentos-de-estatística-e-visualização-20-horas">3. Fundamentos de Estatística e Visualização (20 horas)</h3>
+<section id="fundamentos-de-inferência-estatística" class="level3">
+<h3 class="anchored" data-anchor-id="fundamentos-de-inferência-estatística">3. Fundamentos de Inferência Estatística</h3>
 <ul>
-<li>3.1. Estatística Descritiva e Exploração de Dados
+<li>3.1. Fundamentos de Inferência Estatística
 <ul>
-<li>3.1.1. Medidas de tendência central e dispersão</li>
-<li>3.1.2. Análise exploratória de dados financeiros</li>
-<li>3.1.3. Visualização de dados com ggplot2</li>
-<li>3.1.4. Dashboards básicos com flexdashboard</li>
+<li>3.1.1. Amostragem Aleatória</li>
+<li>3.1.2. Estimação pontual e intervalar</li>
+<li>3.1.3. Interpretação de intervalos de confiança</li>
+<li>3.1.4. Simulação para compreensão da inferência estatística</li>
 </ul></li>
-<li>3.2. Inferência Estatística
+<li>3.2. Testes de Hipóteses
 <ul>
-<li>3.2.1. Amostragem e desenho de experimentos</li>
-<li>3.2.2. Estimação pontual e intervalar</li>
-<li>3.2.3. Interpretação de intervalos de confiança em contextos financeiros</li>
-<li>3.2.4. Simulação para compreensão da inferência estatística</li>
+<li>3.2.1. Conceitos Principais</li>
+<li>3.2.2. Testes paramétricos principais</li>
+<li>3.2.3. Interpretação de resultados e significância prática vs.&nbsp;estatística</li>
+<li>3.2.4. Simulação e Inferência Estatística</li>
 </ul></li>
-<li>3.3. Testes de Hipóteses
+<li>3.3. Estatística Descritiva e Análise Exploratória de Dados
 <ul>
-<li>3.3.1. Conceitos Principais</li>
-<li>3.3.2. Testes paramétricos principais (t-test, ANOVA, qui-quadrado)</li>
-<li>3.3.3. Interpretação de resultados e significância prática vs.&nbsp;estatística</li>
-<li>3.3.4. Simulação e Inferência Estatística</li>
-</ul></li>
-<li>3.4. Introdução à Modelagem Estatística
-<ul>
-<li>3.4.1. Correlação e causalidade</li>
-<li>3.4.2. Visualização de relações entre variáveis</li>
+<li>3.3.1. Medidas de tendência central/posição e dispersão</li>
+<li>3.3.2. Análise exploratória numérica e gráfica</li>
 </ul></li>
 </ul>
 </section>
@@ -409,7 +372,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Bibliografia recomendada.</p></li>
 <li><p>Slides e notas de aula (disponibilizados no site da disciplina).</p></li>
 <li><p>Tutoriais desenvolvidos em Quarto.</p></li>
-<li><p>Arquivos quarto demonstrativos (.qmd).</p></li>
+<li><p>Arquivos quarto (<em>reports</em>) demonstrativos (.qmd).</p></li>
 </ul></li>
 <li><p><strong>Ambiente e Ferramentas</strong>:</p>
 <ul>
@@ -429,109 +392,92 @@ ul.task-list li input[type="checkbox"] {
 <p>Certamente, o planejamento apresentado está sujeito a alterações, conforme o andamento da disciplina e o rendimento da turma.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 4%">
 <col style="width: 8%">
-<col style="width: 50%">
-<col style="width: 36%">
+<col style="width: 15%">
+<col style="width: 75%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Aula</th>
 <th style="text-align: center;">Data</th>
-<th style="text-align: center;">Tópicos</th>
-<th style="text-align: center;">Atividades</th>
+<th style="text-align: left;">Tópicos Principais</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">27/03/25</td>
-<td style="text-align: center;">• Instalação e configuração dos softwares<br> • Contexto e Apresentação da disciplina</td>
-<td style="text-align: center;">• Configuração do ambiente de trabalho</td>
+<td style="text-align: left;">Apresentação da Disicplina.</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">03/04/25</td>
-<td style="text-align: center;">• RStudio e projetos estruturados<br>• Primeiros passos com R</td>
-<td style="text-align: center;">• Criação do primeiro projeto R<br>• Exercícios básicos sobre R</td>
+<td style="text-align: left;">Introdução à Computação Científica Reprodutível</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">10/04/25</td>
-<td style="text-align: center;">• Estruturas de dados em R<br>• Importação de dados</td>
-<td style="text-align: center;">• Manipulação de vetores e dataframes<br>• Importação de dados financeiros</td>
+<td style="text-align: left;">Introdução à Computação Científica Reprodutível</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">24/04/25</td>
-<td style="text-align: center;">• Introdução ao Quarto<br>• Manipulação de dados com tidyverse</td>
-<td style="text-align: center;">• Criação do primeiro documento Quarto<br>• <strong>Atividade prática 1</strong></td>
+<td style="text-align: left;">Introdução à Computação Científica Reprodutível</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">08/05/25</td>
-<td style="text-align: center;">• Elementos avançados do Quarto<br>• Programação funcional em R</td>
-<td style="text-align: center;">• Formatação de relatórios em Quarto<br>• Criação de funções simples</td>
+<td style="text-align: left;">Introdução à Computação Científica Reprodutível</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">15/05/25</td>
-<td style="text-align: center;">• Controle de versão com Git e GitHub<br>• Conceitos básicos de probabilidade</td>
-<td style="text-align: center;">• Configuração do repositório GitHub<br>• <strong>Atividade prática 2</strong></td>
+<td style="text-align: left;">Introdução à Computação Científica Reprodutível</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">7</td>
 <td style="text-align: center;">22/05/25</td>
-<td style="text-align: center;">• Probabilidade condicional e independência<br>• Introdução às variáveis aleatórias</td>
-<td style="text-align: center;">• Resolução de problemas de probabilidade<br>• Implementação em R</td>
+<td style="text-align: left;">Introdução à Computação Científica Reprodutível</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">29/05/25</td>
-<td style="text-align: center;">• Distribuições discretas<br>• Distribuições contínuas</td>
-<td style="text-align: center;">• <strong>Projeto intermediário (apresentação)</strong><br>• Simulações de distribuições</td>
+<td style="text-align: left;">Avaliação 1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">9</td>
 <td style="text-align: center;">05/06/25</td>
-<td style="text-align: center;">• Simulação de Monte Carlo - princípios<br>• Aplicações financeiras da simulação</td>
-<td style="text-align: center;">• Simulações de eventos aleatórios<br>• <strong>Atividade prática 3</strong></td>
+<td style="text-align: left;">Fundamentos de Probabilidade e Simulação</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">12/06/25</td>
-<td style="text-align: center;">• Estatística descritiva<br>• Análise exploratória de dados financeiros</td>
-<td style="text-align: center;">• Análise de conjuntos de dados reais<br>• Cálculo de estatísticas descritivas</td>
+<td style="text-align: left;">Fundamentos de Probabilidade e Simulação</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">11</td>
 <td style="text-align: center;">26/06/25</td>
-<td style="text-align: center;">• Visualização de dados com ggplot2<br>• Dashboards básicos</td>
-<td style="text-align: center;">• Criação de gráficos informativos<br>• <strong>Atividade prática 4</strong></td>
+<td style="text-align: left;">Fundamentos de Probabilidade e Simulação</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">03/07/25</td>
-<td style="text-align: center;">• Amostragem e desenho de experimentos<br>• Estimação pontual e intervalar</td>
-<td style="text-align: center;">• Simulações de amostragem<br>• Construção de intervalos de confiança</td>
+<td style="text-align: left;">Fundamentos de Inferência Estatística</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">13</td>
 <td style="text-align: center;">10/07/25</td>
-<td style="text-align: center;">• Testes de hipóteses em finanças<br>• Interpretação de resultados estatísticos</td>
-<td style="text-align: center;">• <strong>Avaliação teórico-prática</strong><br>• Implementação de testes estatísticos</td>
+<td style="text-align: left;">Fundamentos de Inferência Estatística</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">17/07/25</td>
-<td style="text-align: center;">• Correlação e causalidade<br>• Introdução a modelos preditivos</td>
-<td style="text-align: center;">• Análise de correlações • <strong>Atividade prática 5</strong></td>
+<td style="text-align: left;">Fundamentos de Inferência Estatística - Avaliação 2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">15</td>
 <td style="text-align: center;">24/07/25</td>
-<td style="text-align: center;">• Validação de modelos<br>• Integração dos conhecimentos</td>
-<td style="text-align: center;">• <strong>Apresentação do Projeto Final</strong><br>• Fechamento da disciplina</td>
+<td style="text-align: left;">Avaliação 3</td>
 </tr>
 </tbody>
 </table>
