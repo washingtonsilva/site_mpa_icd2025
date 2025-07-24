@@ -309,6 +309,6 @@ o andamento da disciplina e o rendimento da turma.
 |12    | 03/07/25  | Fundamentos de Inferência Estatística               |
 |13    | 10/07/25  | Fundamentos de Inferência Estatística               |
 |14    | 17/07/25  | Fundamentos de Inferência Estatística - Avaliação 2 |
-|15    | 24/07/25  | Avaliação 3                                         |
+|15    | 24/07/25  | Avaliação 3 / *Encerramento*                        |
 
 

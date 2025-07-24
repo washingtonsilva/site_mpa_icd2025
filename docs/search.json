@@ -114,7 +114,7 @@
     "href": "programa.html#plano-de-aula",
     "title": "Programa da Disciplina",
     "section": "Plano de Aula",
-    "text": "Plano de Aula\nCertamente, o planejamento apresentado está sujeito a alterações, conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nAula\nData\nTópicos Principais\n\n\n\n\n1\n27/03/25\nApresentação da Disicplina.\n\n\n2\n03/04/25\nIntrodução à Computação Científica Reprodutível\n\n\n3\n10/04/25\nIntrodução à Computação Científica Reprodutível\n\n\n4\n24/04/25\nIntrodução à Computação Científica Reprodutível\n\n\n5\n08/05/25\nIntrodução à Computação Científica Reprodutível\n\n\n6\n15/05/25\nIntrodução à Computação Científica Reprodutível\n\n\n7\n22/05/25\nIntrodução à Computação Científica Reprodutível\n\n\n8\n29/05/25\nAvaliação 1\n\n\n9\n05/06/25\nFundamentos de Probabilidade e Simulação\n\n\n10\n12/06/25\nFundamentos de Probabilidade e Simulação\n\n\n11\n26/06/25\nFundamentos de Probabilidade e Simulação\n\n\n12\n03/07/25\nFundamentos de Inferência Estatística\n\n\n13\n10/07/25\nFundamentos de Inferência Estatística\n\n\n14\n17/07/25\nFundamentos de Inferência Estatística - Avaliação 2\n\n\n15\n24/07/25\nAvaliação 3",
+    "text": "Plano de Aula\nCertamente, o planejamento apresentado está sujeito a alterações, conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nAula\nData\nTópicos Principais\n\n\n\n\n1\n27/03/25\nApresentação da Disicplina.\n\n\n2\n03/04/25\nIntrodução à Computação Científica Reprodutível\n\n\n3\n10/04/25\nIntrodução à Computação Científica Reprodutível\n\n\n4\n24/04/25\nIntrodução à Computação Científica Reprodutível\n\n\n5\n08/05/25\nIntrodução à Computação Científica Reprodutível\n\n\n6\n15/05/25\nIntrodução à Computação Científica Reprodutível\n\n\n7\n22/05/25\nIntrodução à Computação Científica Reprodutível\n\n\n8\n29/05/25\nAvaliação 1\n\n\n9\n05/06/25\nFundamentos de Probabilidade e Simulação\n\n\n10\n12/06/25\nFundamentos de Probabilidade e Simulação\n\n\n11\n26/06/25\nFundamentos de Probabilidade e Simulação\n\n\n12\n03/07/25\nFundamentos de Inferência Estatística\n\n\n13\n10/07/25\nFundamentos de Inferência Estatística\n\n\n14\n17/07/25\nFundamentos de Inferência Estatística - Avaliação 2\n\n\n15\n24/07/25\nAvaliação 3 / Encerramento",
     "crumbs": [
       "Início",
       "Programa da Disciplina"
@@ -280,6 +280,17 @@
     "title": "Cronograma",
     "section": "Aula 14 (17/07/2025)",
     "text": "Aula 14 (17/07/2025)\n\nTópicos:\n\nFundamentos de Inferência Estatística - Parte 3\nInformações sobre as Avaliações 2 e 3.\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\nArquivo quarto para a aula\n\n11-report.zip",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "cronograma.html#aula-15-24072025",
+    "href": "cronograma.html#aula-15-24072025",
+    "title": "Cronograma",
+    "section": "Aula 15 (24/07/2025)",
+    "text": "Aula 15 (24/07/2025)\n\nTópico:\n\nAvaliação 2\nAvaliação 3\n\n\n\n\n\n\n\n\nAvaliação 1\n\n\n\nClique aqui para acessar a Avaliação 2\nClique aqui para acessar a Avaliação 3\n\n\n\nArquivos necessários\n\n02-avaliacao-template.zip - template de arquivo quarto para resolução da Avaliação 2\n03-avaliacao-template.zip - template de arquivo quarto para resolução da Avaliação 3\n\n\n\n\n\n\n\n\nEstruturando seu Projeto RStudio para as Avaliações 2 e 3\n\n\n\n\nAbra o RStudio e o seu Projeto RStudio da disciplina.\nDentro da pasta avaliacoes , crie das subpastas chamadas 02-avaliacao e 03-avaliacao\nBaixe o arquivo 02-avaliacao-template.zip, descompacte esse arquivo, copie/recorte os arquivos 02-avaliacao-template.qmd,\nreferencias.bib e associacao-brasileira-de-normas-tecnicas-ipea.csl e salve todos na subpasta 02-avaliacao que você acabou de criar.\nRenomeie o arquivo 02-avaliacao-template.qmd para 02-avaliacao-seunome.qmd\nEscreva seu nome na chave author: \"SEU NOME AQUI\" do cabeçalho yaml e resolva as questões\nFaça o mesmo procedimento para a Avaliação 3, mas para a avaliacão 3 não há arquivos .bib e .csl, apenas o arquivo quarto.",
     "crumbs": [
       "Início",
       "Cronograma"

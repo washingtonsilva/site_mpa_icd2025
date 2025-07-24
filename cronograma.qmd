@@ -544,3 +544,54 @@ use o assunto: **Avaliação 1 - MPA**.
 
 
 
+
+# Semana 15
+
+## Aula 15 (24/07/2025)
+
+- **Tópico:**
+
+  - Avaliação 2
+  - Avaliação 3
+
+::: {.callout-tip}
+## Avaliação 1 
+
+[**Clique aqui para acessar a Avaliação 2**](/arquivos/02-avaliacao.html){target="_blank"}
+
+[**Clique aqui para acessar a Avaliação 3**](/arquivos/03-avaliacao.html){target="_blank"}
+:::
+
+
+- **Arquivos necessários**
+
+  - [02-avaliacao-template.zip](arquivos/02-avaliacao-template.zip) - template de arquivo quarto para resolução da **Avaliação 2**
+  - [03-avaliacao-template.zip](arquivos/03-avaliacao-template.zip) - template de arquivo quarto para resolução da **Avaliação 3**
+
+
+
+::: {.callout-tip}
+## Estruturando seu Projeto RStudio para as Avaliações 2 e 3
+
+1. Abra o RStudio e o seu Projeto RStudio da disciplina.
+
+4. Dentro da pasta **avaliacoes** , crie das subpastas chamadas 
+**02-avaliacao** e **03-avaliacao**
+
+5. Baixe o arquivo **02-avaliacao-template.zip**, descompacte esse arquivo, 
+copie/recorte os arquivos `02-avaliacao-template.qmd`,  
+`referencias.bib` e `associacao-brasileira-de-normas-tecnicas-ipea.csl` e salve 
+todos na subpasta **02-avaliacao** que você acabou de criar.
+
+6. Renomeie o arquivo `02-avaliacao-template.qmd` para 
+`02-avaliacao-seunome.qmd`
+
+7. Escreva seu nome na chave `author: "SEU NOME AQUI"` do cabeçalho yaml 
+e resolva as questões
+
+8. Faça o mesmo procedimento para a **Avaliação 3**, mas para a avaliacão 3 
+**não** há arquivos `.bib` e `.csl`, apenas o arquivo quarto.
+:::
+
+
+
